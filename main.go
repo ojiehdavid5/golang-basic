@@ -139,11 +139,20 @@ func main() {
 
 //Copy
 
-slice1 := []int{1,2,3,6,8,9}
-slice2 := make([]int, 8)
-copy(slice2, slice1)
-fmt.Println(slice1, slice2)
+// slice1 := []int{1,2,3,6,8,9}
+// slice2 := make([]int, 8)
+// copy(slice2, slice1)
+// fmt.Println(slice1, slice2)
 
 
+
+//MAPPING
+
+
+//var x map[string]int;
+x:= make(map[string]int)
+x["key"] = 10
+x["world"] = 11
+fmt.Println(x["key"])
 
 }
