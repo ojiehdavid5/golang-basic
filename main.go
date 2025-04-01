@@ -181,49 +181,135 @@ func main() {
 // fmt.Println(name, ok)
 
 
-elements := map[string]map[string]string{
-    "H": map[string]string{
-    "name":"Hydrogen",
-    "state":"gas",
-    },
-    "He": map[string]string{
-    "name":"Helium",
-    "state":"gas",
-    },
-    "Li": map[string]string{
-    "name":"Lithium",
-    "state":"solid",
-    },"Be": map[string]string{
-"name":"Beryllium",
-"state":"solid",
-},
-"B": map[string]string{
-"name":"Boron",
-"state":"solid",
-},
-"C": map[string]string{
-"name":"Carbon",
-"state":"solid",
-},
-"N": map[string]string{
-"name":"Nitrogen",
-"state":"gas",
-},
-"O": map[string]string{
-"name":"Oxygen",
-"state":"gas",
-},
-"F": map[string]string{
-"name":"Fluorine",
-"state":"gas",
-},
-"Ne": map[string]string{
-"name":"Neon",
-"state":"gas",
-},
-}
-if el, ok := elements["Ne"]; ok {
-fmt.Println(el["name"], el["state"]);
-}
+// elements := map[string]map[string]string{
+//     "H": map[string]string{
+//     "name":"Hydrogen",
+//     "state":"gas",
+//     },
+//     "He": map[string]string{
+//     "name":"Helium",
+//     "state":"gas",
+//     },
+//     "Li": map[string]string{
+//     "name":"Lithium",
+//     "state":"solid",
+//     },"Be": map[string]string{
+// "name":"Beryllium",
+// "state":"solid",
+// },
+// "B": map[string]string{
+// "name":"Boron",
+// "state":"solid",
+// },
+// "C": map[string]string{
+// "name":"Carbon",
+// "state":"solid",
+// },
+// "N": map[string]string{
+// "name":"Nitrogen",
+// "state":"gas",
+// },
+// "O": map[string]string{
+// "name":"Oxygen",
+// "state":"gas",
+// },
+// "F": map[string]string{
+// "name":"Fluorine",
+// "state":"gas",
+// },
+// "Ne": map[string]string{
+// "name":"Neon",
+// "state":"gas",
+// },
+// }
+// if el, ok := elements["Ne"]; ok {
+// fmt.Println(el["name"], el["state"]);
+// }
+
+//Function
+// xs := []float64{98,93,77,82,83}
+
+
+// fmt.Println(average(xs));
+
+
+
+
+// x,y:=f();
+// fmt.Println(x,y);
+
+
+
+
+//variadic function
+
+
+
+// fmt.Println(add(1,2,3,4,5,6,7,8,9,7,6,5,4,3,2,4,6))
+
+
+
+    // add := func(x , y int) int {
+    // return x + y
+    // }
+    // fmt.Println(add(1,1))
+
+
+
+//     x := 0
+// increment := func() int {
+// x++
+// return x
+// }
+// fmt.Println(increment())
+// fmt.Println(increment())
+
+fmt.Println(factorial(3))
+
 }
 
+
+
+
+
+// func average(xs []float64) float64 {
+//     // panic("Not Implemented")
+
+//     total := 0.0;
+//     for i:=0; i<len(xs); i++{
+//         total+=xs[i];
+
+//     }
+//     return total / float64(len(xs));
+
+
+    
+
+// }
+
+
+
+// func f()(int,int){
+//     return 5,0
+// }
+
+
+
+//variadic function
+// func add(args ...int) int {
+//     total := 0
+//     for _, v := range args {
+//     total += v
+//     }
+//     return total
+//     }
+
+
+//recursion
+
+func factorial(x uint) uint {
+    if x == 0 {
+    return 1
+    }
+    return x * factorial(x-1)
+    }
