@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+// import "os"
 
 func main() {
     fmt.Println("Hello, world!")
@@ -264,7 +265,24 @@ func main() {
 // fmt.Println(increment())
 // fmt.Println(increment())
 
-fmt.Println(factorial(3))
+// fmt.Println(factorial(3))
+
+
+//Defer ,Panic & Recover
+
+//  defer second()
+//  first()
+
+//  f, _ := os.Open()
+// defer f.Close()
+
+
+defer func() {
+    str := recover()
+    fmt.Println(str)
+    }()
+    panic("PANIC")
+
 
 }
 
@@ -307,9 +325,19 @@ fmt.Println(factorial(3))
 
 //recursion
 
-func factorial(x uint) uint {
-    if x == 0 {
-    return 1
+// func factorial(x uint) uint {
+//     if x == 0 {
+//     return 1
+//     }
+//     return x * factorial(x-1)
+//     }
+
+
+//Defer ,Panic & Recover
+
+func first() {
+    fmt.Println("1st")
     }
-    return x * factorial(x-1)
+    func second() {
+    fmt.Println("2nd")
     }
