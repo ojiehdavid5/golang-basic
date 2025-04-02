@@ -277,11 +277,17 @@ func main() {
 // defer f.Close()
 
 
-defer func() {
-    str := recover()
-    fmt.Println(str)
-    }()
-    panic("PANIC")
+// defer func() {
+//     str := recover()
+//     fmt.Println(str)
+//     }()
+//     panic("PANIC")
+
+//Pointers
+
+// 
+
+//Stuct and interface
 
 
 }
@@ -335,9 +341,15 @@ defer func() {
 
 //Defer ,Panic & Recover
 
-func first() {
-    fmt.Println("1st")
-    }
-    func second() {
-    fmt.Println("2nd")
+// func first() {
+//     fmt.Println("1st")
+//     }
+//     func second() {
+//     fmt.Println("2nd")
+//     }
+
+
+//pointer
+func zero(xPtr *int) {
+    *xPtr = 0
     }
