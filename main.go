@@ -312,8 +312,13 @@ func main() {
 // fmt.Println(r.area())
 
 
-p:=Person{"chuks"}
-p.Talk();
+// p:=Person{"chuks"}
+// p.Talk();
+
+
+// a:=new(Android);
+// a.Talk();
+
 
 }
 
@@ -428,9 +433,20 @@ p.Talk();
 
 //EMBEDDED TYPES
 
-type Person struct {
-    Name string
-    }
-    func (p *Person) Talk() {
-    fmt.Println("Hi, my name is", p.Name)
-    }
+// type Person struct {
+//     Name string
+//     }
+//     func (p *Person) Talk() {
+//     fmt.Println("Hi, my name is", p.Name)
+//     }
+
+
+
+//     type Android struct {
+//         Person
+//         Model string
+//         }
+
+
+
+//INTERFACES
