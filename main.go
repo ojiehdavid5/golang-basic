@@ -1,6 +1,6 @@
 package main
-// import ("fmt"; "math")
-import "fmt";
+import ("fmt"; "math")
+// import "fmt";
 
 // import "os"
 
@@ -306,7 +306,8 @@ func main() {
 
 
 
-// r:=Rectangle{1,0,3,4}
+c:=Circle{1,4,5}
+r:=Rectangle{1,0,3,4}
 
 
 // fmt.Println(r.area())
@@ -318,6 +319,8 @@ func main() {
 
 // a:=new(Android);
 // a.Talk();
+
+fmt.Println(totalArea(&c, &r))
 
 
 }
@@ -450,3 +453,15 @@ func main() {
 
 
 //INTERFACES
+// type Shape interface {
+//     area() float64
+//     }
+
+
+    // func totalArea(shapes ...Shape) float64 {
+    //     var area float64
+    //     for _, s := range shapes {
+    //     area += s.area()
+    //     }
+    //     return area
+    //     }
