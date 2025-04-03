@@ -1,6 +1,6 @@
 package main
-import ("fmt"; "math")
-// import "fmt";
+// import ("fmt"; "math")
+import "fmt";
 
 // import "os"
 
@@ -306,8 +306,8 @@ func main() {
 
 
 
-c:=Circle{1,4,5}
-r:=Rectangle{1,0,3,4}
+// c:=Circle{1,4,5}
+// r:=Rectangle{1,0,3,4}
 
 
 // fmt.Println(r.area())
@@ -320,7 +320,17 @@ r:=Rectangle{1,0,3,4}
 // a:=new(Android);
 // a.Talk();
 
-fmt.Println(totalArea(&c, &r))
+// fmt.Println(totalArea(&c, &r))
+
+
+
+
+
+
+
+//CONCURRENCY
+
+
 
 
 }
@@ -465,3 +475,5 @@ fmt.Println(totalArea(&c, &r))
     //     }
     //     return area
     //     }
+
+
