@@ -330,6 +330,11 @@ func main() {
 
 //CONCURRENCY
 
+   go f(0)
+var input string
+fmt.Scanln(&input)
+fmt.Println( "this is the input",input)
+
 
 
 
@@ -475,5 +480,18 @@ func main() {
     //     }
     //     return area
     //     }
+
+
+
+    //CONCURRENCY
+
+
+    //GOROUNTINUES
+
+    func f(n int) {
+        for i := 0; i < 10; i++ {
+        fmt.Println(n, ":", i)
+        }
+        }
 
 
