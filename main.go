@@ -530,6 +530,8 @@ fmt.Scanln(&input)
 
 
     func pinger(c chan string) {
+
+        
         for i := 0; ; i++ {
         c <- "ping"
         }
