@@ -357,6 +357,9 @@ var input string
 fmt.Scanln(&input)
 
 
+//CHANNEL DIRECTION
+
+
 
 }
 
@@ -531,7 +534,7 @@ fmt.Scanln(&input)
 
     func pinger(c chan string) {
 
-        
+
         for i := 0; ; i++ {
         c <- "ping"
         }
