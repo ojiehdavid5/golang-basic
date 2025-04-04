@@ -1,6 +1,11 @@
 package main
 // import ("fmt"; "math")
-import "fmt";
+// import "fmt";
+import (
+    "fmt"
+    "time"
+    // "math/rand"
+    )
 
 // import "os"
 
@@ -330,11 +335,25 @@ func main() {
 
 //CONCURRENCY
 
-   go f(0)
+//    go f(0)
+// var input string
+// fmt.Scanln(&input)
+// fmt.Println( "this is the input",input)
+
+
+    // for i := 0; i < 10; i++ {
+    // go f(i)
+    // }
+    // var input string
+    // fmt.Scanln(&input)
+
+
+    //CHANNNELS
+    var c chan string = make(chan string)
+go pinger(c)
+go printer(c)
 var input string
 fmt.Scanln(&input)
-fmt.Println( "this is the input",input)
-
 
 
 
@@ -488,10 +507,36 @@ fmt.Println( "this is the input",input)
 
     //GOROUNTINUES
 
-    func f(n int) {
-        for i := 0; i < 10; i++ {
-        fmt.Println(n, ":", i)
-        }
-        }
+    // func f(n int) {
+    //     for i := 0; i < 10; i++ {
+    //     fmt.Println(n, ":", i)
+    //     }
+    //     }
 
 
+    // func f(n int) {
+    //     for i := 0; i < 10; i++ {
+    //     fmt.Println(n, ":", i)
+    //     amt := time.Duration(rand.Intn(250))
+    //     time.Sleep(time.Millisecond * amt)
+    //     }
+    //     }
+
+
+
+
+    //CHANNELS
+
+
+    func pinger(c chan string) {
+        for i := 0; ; i++ {
+        c <- "ping"
+        }
+        }
+        func printer(c chan string) {
+        for {
+        msg := <- c
+        fmt.Println(msg)
+        time.Sleep(time.Second * 1)
+        }
+    }
