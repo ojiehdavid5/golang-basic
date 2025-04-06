@@ -6,7 +6,7 @@ import (
     "time"
     // "math/rand"
     )
-    import m  "go/src/hello/math/math.go"
+    import  m   "/Users/user/go/src/hello/math"
 
 // import "os"
 
