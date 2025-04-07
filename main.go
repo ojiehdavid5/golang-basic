@@ -6,7 +6,6 @@ import (
     "time"
     // "math/rand"
     )
-    import  m   "/Users/user/go/src/hello/math"
 
 // import "os"
 
@@ -402,13 +401,20 @@ func main() {
         // avg := m.Average(xs)
 
 
-        
+
 
         
         // fmt.Println(avg)
 
 
         //TESTING
+
+
+
+
+        //strings
+
+        
 
         
 
