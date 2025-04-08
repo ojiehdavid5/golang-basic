@@ -9,6 +9,7 @@ import (
     // "oi"
     "os"
     // "io/ioutil"
+    "path/filepath"
     )
 
 // import "os"
@@ -519,22 +520,28 @@ func main() {
 
 
 
-dir, err := os.Open(".")
-if err != nil {
-return
-}
-defer dir.Close()
-fileInfos, err := dir.Readdir(-1)
-if err != nil {
-return
-}
+// dir, err := os.Open(".")
+// if err != nil {
+// return
+// }
+// defer dir.Close()
+// fileInfos, err := dir.Readdir(-1)
+// if err != nil {
+// return
+// }
 
-for i:=0; i<len(fileInfos); i++{
-fmt.Println(fileInfos[i].Name());
-}
+// for i:=0; i<len(fileInfos); i++{
+// fmt.Println(fileInfos[i].Name());
+// }
 // for _, fi := range fileInfos {
 // fmt.Println(fi.Name())
 // }
+
+
+filepath.Walk(".",func(path string,info os.FileInfo,err error)error{
+    fmt.Println(path)
+    return nil
+})
 }
 
 
