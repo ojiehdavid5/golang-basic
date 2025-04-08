@@ -5,7 +5,9 @@ import (
     "fmt"
     // "time"
     // "math/rand"
-    "strings"
+    // "strings"
+    // "oi"
+    "os"
     )
 
 // import "os"
@@ -446,15 +448,40 @@ func main() {
 //READ AND WRITE IO
 
     
- arr := []byte("test")
- str := string([]byte{'t','e','s','t'})
+//  arr := []byte("test")
+//  str := string([]byte{'t','e','s','t'})
 
       
     
- var buf bytes.Buffer
- buf.Write([]byte("test"))
+//  var buf bytes.Buffer
+//  buf.Write([]byte("test"))
 
 
+
+file, err := os.Open("test.txt")
+if err != nil {
+// handle the error here
+fmt.Println(err)
+return ;
+}
+
+
+defer file.Close()
+// get the file size
+stat, err := file.Stat()
+if err != nil {
+    fmt.Println()
+return
+}
+// fmt.Println(stat)
+// read the file
+bs := make([]byte, stat.Size())
+_, err = file.Read(bs)
+if err != nil {
+return
+}
+// str := string(bs)
+// fmt.Println(str)
 
 }
 
@@ -665,5 +692,5 @@ func main() {
 
     //READ AND WRITE
 
-    func Copy(dst Writer, src Reader) (written int64, err error) 
+    // func Copy(dst oi.Writer, src oi.Reader) (written int64, err error) 
 
