@@ -553,6 +553,8 @@ func main() {
 
 
 //container and sort
+//sort
+
 
 
 }
@@ -762,4 +764,22 @@ func main() {
     //READ AND WRITE
 
     // func Copy(dst oi.Writer, src oi.Reader) (written int64, err error) 
+
+    //sort
+
+
+    type Person struct {
+        Name string
+        Age int
+        }
+        type ByName []Person
+        func (this ByName) Len() int {
+        return len(this)
+        }
+        func (this ByName) Less(i, j int) bool {
+        return this[i].Name < this[j].Name
+        }
+        func (this ByName) Swap(i, j int) {
+        this[i], this[j] = this[j], this[i]
+        }
 
