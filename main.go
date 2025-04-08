@@ -440,14 +440,19 @@ func main() {
 //         strings.ToUpper("test"),
 // )
 
-// arr := []byte("test")
-// str := string([]byte{'t','e','s','t'})
 
 // fmt.Println(arr, str);
 
 //READ AND WRITE IO
 
     
+ arr := []byte("test")
+ str := string([]byte{'t','e','s','t'})
+
+      
+    
+ var buf bytes.Buffer
+ buf.Write([]byte("test"))
 
 
 
@@ -656,3 +661,9 @@ func main() {
     //     c <- "pong"
     //     }
     //     }
+
+
+    //READ AND WRITE
+
+    func Copy(dst Writer, src Reader) (written int64, err error) 
+
