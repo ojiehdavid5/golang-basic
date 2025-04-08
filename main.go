@@ -7,9 +7,10 @@ import (
     // "math/rand"
     // "strings"
     // "oi"
-    "os"
+    // "os"
     // "io/ioutil"
-    "path/filepath"
+    // "path/filepath"
+    "errors"
     )
 
 // import "os"
@@ -540,10 +541,20 @@ func main() {
 
 //FILEPATH
 
-filepath.Walk(".",func(path string,info os.FileInfo,err error)error{
-    fmt.Println(path)
-    return nil
-})
+// filepath.Walk(".",func(path string,info os.FileInfo,err error)error{
+//     fmt.Println(path)
+//     return nil
+// })
+
+
+//Errors
+// err := errors.New("error message")
+// fmt.Println(err)
+
+
+//container and sort
+
+
 }
 
 
