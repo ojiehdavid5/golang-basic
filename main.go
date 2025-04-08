@@ -8,6 +8,7 @@ import (
     // "strings"
     // "oi"
     "os"
+    // "io/ioutil"
     )
 
 // import "os"
@@ -458,35 +459,83 @@ func main() {
 
 
 
-file, err := os.Open("test.txt")
-if err != nil {
-// handle the error here
-fmt.Println(err)
-return ;
-}
+// file, err := os.Open("test.txt")
+// if err != nil {
+// // handle the error here
+// fmt.Println("err:",err)
+
+// return
+// ;
+// }
 
 
-defer file.Close()
-// get the file size
-stat, err := file.Stat()
-if err != nil {
-    fmt.Println()
-return
-}
-// fmt.Println(stat)
-// read the file
-bs := make([]byte, stat.Size())
-_, err = file.Read(bs)
-if err != nil {
-return
-}
+// defer file.Close()
+// // get the file size
+// stat, err := file.Stat()
+// if err != nil {
+//     fmt.Println()
+// return
+// }
+// // fmt.Println(stat.Size())
+// // read the file
+// bs := make([]byte, stat.Size())
+// _, err = file.Read(bs)
+// if err != nil {
+// return
+// }
 // str := string(bs)
 // fmt.Println(str)
 
+//SHORTER METHOD TO READ
+
+
+// bs,err:=os.ReadFile("test.txt");
+// if err!=nil{
+//     return;
+
+// }
+// str:=string(bs);
+
+// fmt.Println(str);
+
+
+//CREATE AND WRITE FILE
+
+// file,err:=os.Create("ojieh.txt");
+
+// if err!=nil{
+//     fmt.Println(err)
+//     return
+
+// }
+// defer file.Close();
+
+// file.WriteString("CHUKSONCHAIN");
+// fmt.Println("file created");
+
+// txt,err:=os.ReadFile("ojieh.txt");
+
+// fmt.Println(string(txt));
+
+
+
+dir, err := os.Open(".")
+if err != nil {
+return
+}
+defer dir.Close()
+fileInfos, err := dir.Readdir(-1)
+if err != nil {
+return
 }
 
-
-
+for i:=0; i<len(fileInfos); i++{
+fmt.Println(fileInfos[i].Name());
+}
+// for _, fi := range fileInfos {
+// fmt.Println(fi.Name())
+// }
+}
 
 
 // func average(xs []float64) float64 {
