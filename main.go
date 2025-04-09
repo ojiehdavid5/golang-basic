@@ -12,7 +12,7 @@ import (
     // "path/filepath"
     // "errors"
 // "sort"
-"hash/crc32"
+// "hash/crc32"
 )
 
 // import "os"
@@ -567,10 +567,27 @@ func main() {
 
 //HASHES CRYPTOCRAPHY
 
-h := crc32.NewIEEE()
-h.Write([]byte("test"))
-v := h.Sum32()
-fmt.Println(v)
+// h := crc32.NewIEEE()
+// h.Write([]byte("test"))
+// v := h.Sum32()
+// fmt.Println(v)
+
+// h1,err:=getHash("ojieh.txt");
+
+// if err!=nil{
+//     return 
+// }
+// h2,err:=getHash("test.txt");
+
+// if err!=nil{
+//     return 
+// }
+
+
+// fmt.Println(h1,h2,h1==h2);
+
+
+
 
 
 }
@@ -801,3 +818,15 @@ fmt.Println(v)
 
 
     //HAshes
+
+
+    // func getHash(filename string)(uint32,error){
+    //     bs,err:=os.ReadFile(filename);
+    //     if err != nil{
+    //         return 0,err
+    //     }
+    //     h :=crc32.NewIEEE()
+    //     h.Write(bs)
+    //     return h.Sum32(),nil
+    
+    // }
