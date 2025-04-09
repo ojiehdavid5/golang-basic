@@ -6,13 +6,14 @@ import (
     // "time"
     // "math/rand"
     // "strings"
-    // "oi"
+    "oi"
     // "os"
     // "io/ioutil"
     // "path/filepath"
     // "errors"
 // "sort"
 // "hash/crc32"
+"net/http"
 )
 
 // import "os"
@@ -587,6 +588,16 @@ func main() {
 // fmt.Println(h1,h2,h1==h2);
 
 
+http.HandleFunc("/", handler)
+
+// Start the server on port 8080
+fmt.Println("Server is listening on port 8080...")
+err := http.ListenAndServe(":8080", nil)
+if err != nil {
+    fmt.Println("Error starting server:", err)
+}
+
+
 
 
 
@@ -830,3 +841,19 @@ func main() {
     //     return h.Sum32(),nil
     
     // }
+    //SERVER
+    func handler(res http.ResponseWriter, req *http.Request) {
+        // Set the Content-Type header to text/html
+        res.Header().Set("Content-Type", "text/html")
+    
+        // Write the HTML response
+        io.WriteString(res, `<!DOCTYPE html>
+        <html>
+        <head>
+            <title>Hello, World!</title>
+        </head>
+        <body>
+            <h1>Hello, World!</h1>
+        </body>
+        </html>`)
+    }
