@@ -12,6 +12,7 @@ import (
     // "path/filepath"
     // "errors"
 // "sort"
+"hash/crc32"
 )
 
 // import "os"
@@ -561,6 +562,15 @@ func main() {
 //     }
 //     sort.Sort(ByName(kids))
 //     fmt.Println(kids)
+//
+
+
+//HASHES CRYPTOCRAPHY
+
+h := crc32.NewIEEE()
+h.Write([]byte("test"))
+v := h.Sum32()
+fmt.Println(v)
 
 
 }
