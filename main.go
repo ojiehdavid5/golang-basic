@@ -4,16 +4,17 @@ package main
 import (
     "fmt"
     // "time"
+    "math"
     // "math/rand"
     // "strings"
-    "oi"
+    // "oi"
     // "os"
     // "io/ioutil"
     // "path/filepath"
     // "errors"
 // "sort"
 // "hash/crc32"
-"net/http"
+// "net/http"
 )
 
 // import "os"
@@ -309,34 +310,34 @@ func main() {
 
 
 
-// var rx1, ry1 float64 = 0, 0
-// var rx2, ry2 float64 = 10, 10
-// var cx, cy, cr float64 = 0, 0, 5
-// fmt.Println(rectangleArea(rx1, ry1, rx2,
-// ry2))
-// fmt.Println(circleArea(cx, cy, cr))
+var rx1, ry1 float64 = 0, 0
+var rx2, ry2 float64 = 10, 10
+var cx, cy, cr float64 = 0, 0, 5
+fmt.Println(rectangleArea(rx1, ry1, rx2,
+ry2))
+fmt.Println(circleArea(cx, cy, cr))
 
-// type Circle struct{
-//     x,y,r float64;
-// }
-
-
-
-// c:=Circle{1,4,5}
-// r:=Rectangle{1,0,3,4}
+type Circle struct{
+    x,y,r float64;
+}
 
 
-// fmt.Println(r.area())
+
+c:=Circle{1,4,5}
+r:=Rectangle{1,0,3,4}
 
 
-// p:=Person{"chuks"}
-// p.Talk();
+fmt.Println(r.area())
 
 
-// a:=new(Android);
-// a.Talk();
+p:=Person{"chuks"}
+p.Talk();
 
-// fmt.Println(totalArea(&c, &r))
+
+a:=new(Android);
+a.Talk();
+
+fmt.Println(totalArea(&c, &r))
 
 
 
@@ -588,14 +589,14 @@ func main() {
 // fmt.Println(h1,h2,h1==h2);
 
 
-http.HandleFunc("/", handler)
+// http.HandleFunc("/", handler)
 
-// Start the server on port 8080
-fmt.Println("Server is listening on port 8080...")
-err := http.ListenAndServe(":8080", nil)
-if err != nil {
-    fmt.Println("Error starting server:", err)
-}
+// // Start the server on port 8080
+// fmt.Println("Server is listening on port 8080...")
+// err := http.ListenAndServe(":8080", nil)
+// if err != nil {
+//     fmt.Println("Error starting server:", err)
+// }
 
 
 
@@ -665,47 +666,47 @@ if err != nil {
 
 
 //Sturct and interface
-//     func rectangleArea(x1, y1, x2, y2 float64) float64 {
-//         l := distance(x1, y1, x1, y2)
-//         w := distance(x1, y1, x2, y1)
-//         return l * w
+    func rectangleArea(x1, y1, x2, y2 float64) float64 {
+        l := distance(x1, y1, x1, y2)
+        w := distance(x1, y1, x2, y1)
+        return l * w
     
-//     }
+    }
                 
     
 
 
-//     func circleArea(x, y, r float64) float64 {
-//     return math.Pi * r*r
-//     }
+    func circleArea(x, y, r float64) float64 {
+    return math.Pi  *  r * r
+    }
 
-// type Circle struct{
-//     x,y,r float64;
-// }
-
-
+type Circle struct{
+    x,y,r float64;
+}
 
 
-// func (c *Circle) area() float64 {
-//     return math.Pi * c.r*c.r
-//     }
-// func distance(x1, y1, x2, y2 float64) float64 {
-//     a := x2 -  x1;
-//     b := y2 - y1
-//     return math.Sqrt(a*a + b*b)
-//     }
-//     type Rectangle struct{
-//         x1,y1,x2,y2 float64
-//     }
 
 
-//     func (r * Rectangle) area() float64{
+func (c *Circle) area() float64 {
+    return math.Pi * c.r * c.r
+    }
+func distance(x1, y1, x2, y2 float64) float64 {
+    a := x2 -  x1;
+    b := y2 - y1
+    return math.Sqrt(a*a + b*b)
+    }
+    type Rectangle struct{
+        x1,y1,x2,y2 float64
+    }
 
-//         l:=distance(r.x1,r.y2,r.x1,r.y2)
-//         w:=distance(r.x1,r.y1,r.x2,r.y1)
-//         return l*w;
 
-//     }
+    func (r * Rectangle) area() float64{
+
+        l:=distance(r.x1,r.y2,r.x1,r.y2)
+        w:=distance(r.x1,r.y1,r.x2,r.y1)
+        return l*w;
+
+    }
 
 
 
@@ -719,38 +720,38 @@ if err != nil {
 
 //EMBEDDED TYPES
 
-// type Person struct {
+type Person struct {
 
 
 
-//     Name string
-//     }
-//     func (p *Person) Talk() {
-//     fmt.Println("Hi, my name is", p.Name)
-//     }
+    Name string
+    }
+    func (p *Person) Talk() {
+    fmt.Println("Hi, my name is", p.Name)
+    }
 
 
 
-//     type Android struct {
-//         Person
-//         Model string
-//         }
+    type Android struct {
+        Person
+        Model string
+        }
 
 
 
 //INTERFACES
-// type Shape interface {
-//     area() float64
-//     }
+type Shape interface {
+    area() float64
+    }
 
 
-    // func totalArea(shapes ...Shape) float64 {
-    //     var area float64
-    //     for _, s := range shapes {
-    //     area += s.area()
-    //     }
-    //     return area
-    //     }
+    func totalArea(shapes ...Shape) float64 {
+        var area float64
+        for _, s := range shapes {
+        area += s.area()
+        }
+        return area
+        }
 
 
 
@@ -842,18 +843,18 @@ if err != nil {
     
     // }
     //SERVER
-    func handler(res http.ResponseWriter, req *http.Request) {
-        // Set the Content-Type header to text/html
-        res.Header().Set("Content-Type", "text/html")
+    // func handler(res http.ResponseWriter, req *http.Request) {
+    //     // Set the Content-Type header to text/html
+    //     res.Header().Set("Content-Type", "text/html")
     
-        // Write the HTML response
-        io.WriteString(res, `<!DOCTYPE html>
-        <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
-        <body>
-            <h1>Hello, World!</h1>
-        </body>
-        </html>`)
-    }
+    //     // Write the HTML response
+    //     io.WriteString(res, `<!DOCTYPE html>
+    //     <html>
+    //     <head>
+    //         <title>Hello, World!</title>
+    //     </head>
+    //     <body>
+    //         <h1>Hello, World!</h1>
+    //     </body>
+    //     </html>`)
+    // }
