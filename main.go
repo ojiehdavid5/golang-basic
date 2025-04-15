@@ -17,6 +17,9 @@ import (
 "net/http"
 )
 
+
+import "io"
+
 // import "os"
 
 func main() {
@@ -600,15 +603,18 @@ func main() {
 // fmt.Println(h1,h2,h1==h2);
 
 
-http.HandleFunc("/", handler)
+// http.HandleFunc("/", handler)
 
-// Start the server on port 8080
-fmt.Println("Server is listening on port 8080...")
-err := http.ListenAndServe(":8080", nil)
-if err != nil {
-    fmt.Println("Error starting server:", err)
-}
+// // Start the server on port 8080
+// fmt.Println("Server is listening on port 8080...")
+// err := http.ListenAndServe(":8080", nil)
+// if err != nil {
+//     fmt.Println("Error starting server:", err)
+// }
 
+
+// http.HandleFunc("/hello", hello)
+// http.ListenAndServe(":9000", nil)
 
 
 
@@ -856,18 +862,38 @@ if err != nil {
     
     // }
     //SERVER
-    func handler(res http.ResponseWriter, req *http.Request) {
-        // Set the Content-Type header to text/html
-        res.Header().Set("Content-Type", "text/html")
+    // func handler(res http.ResponseWriter, req *http.Request) {
+    //     // Set the Content-Type header to text/html
+    //     res.Header().Set("Content-Type", "text/html")
     
-        // Write the HTML response
-        io.WriteString(res, `<!DOCTYPE html>
-        <html>
-        <head>
-            <title>Hello, World!</title>
-        </head>
-        <body>
-            <h1>Hello, World!</h1>
-        </body>
-        </html>`)
-    }
+    //     // Write the HTML response
+    //     io.WriteString(res, `<!DOCTYPE html>
+    //     <html>
+    //     <head>
+    //         <title>Hello my name is chuks!</title>
+    //     </head>
+    //     <body>
+    //         <h1>Hello, World!</h1>
+    //     </body>
+    //     </html>`)
+    // }
+
+
+    // func hello(res http.ResponseWriter, req *http.Request) {
+    //     res.Header().Set(
+    //     "Content-Type",
+    //     "text/html",
+    //     )
+    //     io.WriteString(
+    //     res,
+    //     `<doctype html>
+    //     <html>
+    //     <head>
+    //             <title>Hello World</title>
+
+    //     </head>
+    //     <body>
+    //     </body>
+    //     </html>`,
+    //     )
+    //     }
