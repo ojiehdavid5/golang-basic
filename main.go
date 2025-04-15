@@ -317,9 +317,9 @@ fmt.Println(rectangleArea(rx1, ry1, rx2,
 ry2))
 fmt.Println(circleArea(cx, cy, cr))
 
-type Circle struct{
-    x,y,r float64;
-}
+// type Circle struct{
+//     x,y,r float64;
+// }
 
 
 
@@ -401,6 +401,17 @@ fmt.Println(totalArea(&c, &r))
     //     fmt.Println("nothing ready")
         
     //     }
+
+    
+
+
+    
+
+
+
+
+
+
     
     // }
     // }()
@@ -638,6 +649,8 @@ fmt.Println(totalArea(&c, &r))
 //     }
 
 
+
+
 //recursion
 
 // func factorial(x uint) uint {
@@ -689,7 +702,7 @@ type Circle struct{
 
 func (c *Circle) area() float64 {
     return math.Pi * c.r * c.r
-    }
+}
 func distance(x1, y1, x2, y2 float64) float64 {
     a := x2 -  x1;
     b := y2 - y1
@@ -700,7 +713,7 @@ func distance(x1, y1, x2, y2 float64) float64 {
     }
 
 
-    func (r * Rectangle) area() float64{
+    func (r *Rectangle) area() float64{
 
         l:=distance(r.x1,r.y2,r.x1,r.y2)
         w:=distance(r.x1,r.y1,r.x2,r.y1)
