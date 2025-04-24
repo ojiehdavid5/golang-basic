@@ -8,7 +8,7 @@ import (
     // "math/rand"
     // "strings"
     // "oi"
-    // "os"
+    "os"
     // "io/ioutil"
     // "path/filepath"
     // "errors"
@@ -352,6 +352,8 @@ fmt.Println(name, ok)
 
 
 
+
+
 //CONCURRENCY
 
 //    go f(0)
@@ -525,21 +527,21 @@ fmt.Println(name, ok)
 
 //CREATE AND WRITE FILE
 
-// file,err:=os.Create("ojieh.txt");
+file,err:=os.Create("chuks.txt");
 
-// if err!=nil{
-//     fmt.Println(err)
-//     return
+if err!=nil{
+    fmt.Println(err)
+    return
 
-// }
-// defer file.Close();
+}
+defer file.Close();
 
-// file.WriteString("CHUKSONCHAIN");
-// fmt.Println("file created");
+file.WriteString("CHUKSONCHAIN");
+fmt.Println("file created");
 
-// txt,err:=os.ReadFile("ojieh.txt");
+txt,err:=os.ReadFile("ojieh.txt");
 
-// fmt.Println(string(txt));
+fmt.Println(string(txt));
 
 
 
