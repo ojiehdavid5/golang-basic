@@ -14,11 +14,11 @@ import (
     // "errors"
 // "sort"
 // "hash/crc32"
-"net/http"
+// "net/http"
 )
 
 
-import "io"
+// import "io"
 
 // import "os"
 
@@ -38,6 +38,8 @@ func main() {
 //     c=5
 // )
 
+
+
 // fmt.Println(a,b,c)
 
 // fmt.Print("Enter a number: ")
@@ -46,6 +48,8 @@ func main() {
 // output := input * 2
 // fmt.Println(output)
 //
+
+
 
 
 
@@ -185,22 +189,22 @@ func main() {
 // delete(x, "key");
 // fmt.Println(x)
 
-// elements := make(map[string]string)
-// elements["H"] = "Hydrogen"
-// elements["He"] = "Helium"
-// elements["Li"] = "Lithium"
-// elements["Be"] = "Beryllium"
-// elements["B"] = "Boron"
-// elements["C"] = "Carbon"
-// elements["N"] = "Nitrogen"
-// elements["O"] = "Oxygen"
-// elements["F"] = "Fluorine"
-// elements["Ne"] = "Neon"
+elements := make(map[string]string)
+elements["H"] = "Hydrogen"
+elements["He"] = "Helium"
+elements["Li"] = "Lithium"
+elements["Be"] = "Beryllium"
+elements["B"] = "Boron"
+elements["C"] = "Carbon"
+elements["N"] = "Nitrogen"
+elements["O"] = "Oxygen"
+elements["F"] = "Fluorine"
+elements["Ne"] = "Neon"
 
 
 
-// name, ok := elements["H"]
-// fmt.Println(name, ok)
+name, ok := elements["H"]
+fmt.Println(name, ok)
 
 
 // elements := map[string]map[string]string{
